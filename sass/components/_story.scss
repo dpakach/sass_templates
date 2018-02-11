@@ -1,0 +1,80 @@
+.story {
+        width: 100%;
+        margin:  0 auto;
+        box-shadow: 0 3rem 6rem rgba($color-black, .1);
+        background-color: rgba($color-white, 0.6);
+        border-radius: 3px;
+        padding: 1rem;
+        padding: 3rem;
+        padding-left: 6rem;
+        font-size: 1.3rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-content: center;
+        align-items: center;
+
+
+        @include respond(phone){
+                grid-template-columns: 1fr;
+        }
+
+
+        &__shape {
+                grid-area: figure;
+                width: 15rem;
+                height: 15rem;
+                background-color: orangered;
+                float: left;
+                -webkit-shape-outside: circle(50% at 50% 50%);
+                shape-outside: circle(50% at 50% 50%);
+                -webkit-clip-path: circle(50% at 50% 50%);
+                clip-path: circle(50% at 50% 50%);
+                transform: translateX(-3rem);
+                position: relative;
+
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+        }
+        &__img {
+                height: 100%;
+                transform: scale(1);
+        }
+
+        &__text {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                &--heading{
+                        display: grid;
+                        grid-gap: 5rem;
+                        grid-template-columns: auto 1fr;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 2rem;
+                }
+        }
+
+
+        &__caption {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                color: $color-white;
+                text-transform: uppercase;
+                font-size: 1.7rem;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.5s;
+                backface-visibility: hidden;
+        }
+
+        &:hover &__caption{
+                opacity: 1;
+                transform: translate(-50%, -50%);
+        }
+
+        &:hover &__img{
+                transform: scale(1);
+                filter: blur(3px) brightness(80%)
+        }
+}

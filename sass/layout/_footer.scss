@@ -1,0 +1,80 @@
+.footer{
+        background-color: $color-tertiary-dark;
+        padding: 2rem 0;
+        font-size: 1.4rem;
+        color: $color-grey-light-1;
+
+        &__logo-box {
+                text-align: center;
+                margin-bottom: 1rem;
+        }
+        &__logo {
+                width: 10rem;
+                height: auto;
+        }
+
+        &__text {
+                display: grid;
+                grid-gap: 5rem;
+                grid-template-columns: auto-fill;
+                padding: 2rem;
+
+                &--navigation {
+                        border-top: 1px solid $color-tertiary-dark;
+                        padding-top: 2rem;
+                }
+                 
+                &--bio {
+                        border-top: 1px solid $color-grey-dark;
+                        text-align: center;
+                        margin: 0 auto;
+                        border-top: 1px solid $color-tertiary-lightest;
+                        padding-top: 2rem;
+                        display: inline-block;
+                        width: 80%;
+                        float: right;
+                }
+        }
+
+        &__list {
+                list-sytle: none;
+                display: grid;
+                grid-gap: 5rem;
+                grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+                justify-content: center;
+        }
+
+
+        &__item {
+                display: inline-block;
+                text-align: center;
+                &:not(:last-child){
+                        margin-right: 1.5rem;
+                }
+
+        }
+
+        &__link {
+                &:link,
+                &:visited{
+    
+                        background-color: $color-tertiary-dark;
+                        color: $color-grey-light-1;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        transition: all .2s;
+                }
+
+
+
+                &:hover,
+                &:active {
+                        color: $color-tertiary-lightest;
+                        box-shadow: 0 1rem 2rem rgba($color-black, .4);
+                        transform: rotate(5deg) scale(1.3);
+                }
+                
+        }
+
+}

@@ -1,0 +1,225 @@
+.top{
+        box-shadow: 0 0 4rem rgba($color-black, .5);
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(1fr, auto);
+        color: $color-tertiary-lightest;
+        grid-template-areas: 
+            "hero    hero    hero    cta1"
+            "hero    hero    hero    cta2"
+            "hero    hero    hero    cta3";
+            @include respond(tab-port){
+                    grid-template-areas:
+                      "hero hero hero"
+                      "cta1 cta2 cta3"
+            }
+
+}
+.hero {
+        background-image:linear-gradient(to right, rgba($color-black, .7), transparent), url(images/test.jpg);
+        grid-area: hero;
+        min-height: 60vh;
+        background-size: cover;
+        background-position: bottom right;
+        padding: 3rem;
+        display: grid;
+        justify-content: start;
+        align-content: end;
+
+        @include respond(tab-port){
+                min-height: 50vh;
+        }
+}
+
+.hero__text {
+        font-size: 3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+}
+
+.cta {
+        font-size: 2.5rem;
+        font-weight: 300;
+        background: $color-tertiary-dark;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include respond(tab-land){
+                font-size: 3.5rem;
+        }
+        
+
+        &__icon{
+                @include respond(phone) {
+                        display: grid;
+                        align-items: end;
+                        padding: 2rem 1rem;
+                        display: none;
+
+                }
+        }
+        &__value{
+                @include respond(phone) {
+                        padding: 2rem;
+                }
+
+        }
+}
+
+.cta p {
+        margin: 0;
+}
+
+.cta1 {
+        grid-area: cta1;
+        border-bottom: 1px solid $color-tertiary-light;
+}
+
+.cta2 {
+        grid-area: cta2;
+        border-bottom: 1px solid $color-tertiary-light;
+}
+.cta3 {
+        grid-area: cta3;
+}
+
+.tags{
+        display: grid;
+        padding: 2rem;
+        grid-gap: 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        justify-content: space-around;
+        margin-bottom: 5rem;
+        box-shadow:0 0 1rem rgba($color-black, .2);
+}
+
+
+.options{
+        margin-bottom: 5rem;
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 1fr auto;
+        color: $color-tertiary-lightest;
+        box-shadow: 0 0 1rem rgba($color-black, .5);
+        @include respond(tab-port){
+                grid-template-columns: 1fr;
+        }
+
+        &__map{
+                background-color: $color-tertiary-lightest;
+
+        }
+        &__cta{
+                padding: 2rem;
+                background-color: $color-tertiary-dark;
+                display: grid;
+                grid-gap: 2rem;
+                @include respond(tab-port){
+                        grid-template-columns: 1fr 1fr;
+                }
+        }
+
+        &__user-info {
+                display: grid;
+                grid-gap: 4rem;
+                justify-content: center;
+                border-radius: 5px;
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    width: 10rem;
+                    margin: auto;
+                }
+        }
+        &__username{
+                font-size: 2rem;
+                text-align: center;
+        }
+        &__photo{
+                position: relative;
+        }
+        &__buttons{
+                display: grid;
+                grid-gap: 2rem;
+                justify-content: center;
+
+                @include respond(tab-port){
+
+                }
+        }
+        &__button{
+                @include respond(phone){
+                        font-size: .8rem;
+                        margin: 0;
+                }
+        }
+
+}
+
+
+
+
+.tag{
+        text-align: center;
+        padding: .5rem;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        box-shadow:0 0 2rem rgba($color-black, 1);
+        background-image: linear-gradient(to right bottom, 
+                                rgba($color-tertiary-lightest, .85), 
+                                rgba($color-tertiary-light, .85));
+        color: $color-grey-dark-3;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+}
+
+.description{
+        display: grid;
+        background-color: $color-tertiary-lightest;
+        font-size: 1.5rem;
+        color: $color-tertiary-dark;
+        padding: 1rem 5rem;
+        box-shadow: 0 0 4rem rgba($color-black, .2);
+        margin-bottom: 5rem;
+}
+
+
+
+
+.reviews{
+        &__form{
+                display: grid;
+                grid-gap: 2rem;
+                grid-template-columns: 1fr auto;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $color-tertiary-lightest;
+                box-shadow: 0 0 2rem rgba($color-black, .3);
+                padding: 2rem;
+                margin-bottom: 5rem;
+                @include respond(tab-port){
+                        grid-template-columns: 1fr;
+                }
+                &__textarea{
+                        width: 100%;
+                        &::-webkit-input-placeholder {
+                                font-size: 2rem;
+                                font-weight: 300;
+                        }
+                }
+
+                &__button{
+                        align-items: center;
+                        height: 4rem;
+                }
+                &__star{
+                        margin-top: 2rem;
+                }
+        } 
+}

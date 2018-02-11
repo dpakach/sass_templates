@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang=en>
+        <head>
+                <meta charset='UTF-8'>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie-edge">
+                <link rel="stylesheet" href= "style.css">
+                <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+                <link rel="stylesheet" href="iconfont.css">
+                <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> 
+                <title>RentalService frontend</title>
+        </head>
+        <body>
+                <nav class="main-nav">
+                        <div class="main-nav__logo-box">
+                                <img class="main-nav__logo"src="images/logo-white.png" alt="">
+                        </div>
+                        <div class="main-nav__search">
+                                <input placeholder="Search...">
+                        </div>
+                        <ul class="main-nav__nav">
+                                <li class="main-nav__item"><a class="main-nav__link" href="#">Home</a></li>
+                                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#">Rental</a></li>
+                                <li class="main-nav__item"><a class="main-nav__link" href="#">login</a> </li>
+                                <li class="main-nav__item"><a class="main-nav__link" href="#">signup</a></li>
+                        </ul>
+                </nav>
+                <nav class="mobile__nav">
+                        <ul class="main-nav__na">
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">nbsp;</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--active" href="#">Home</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Rental</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">login</a> </li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">signup</a></li>
+                        </ul>
+                </nav>
+
+                
+
+
+
+                <div class='container'>
+
+                        <section class="section section--form section--form--signup">
+
+
+                                <div class="card card__form card__form--login">
+
+                                        <div class="card__picture  card__form__picture">
+                                                &nbsp;
+                                        </div>
+                                        <h4 class="card__heading card__heading--form">
+                                                <span class="card__heading-span card__heading-span--form">
+                                                        Signup
+                                                </span>
+                                        </h4>
+                                        <form class="form" action="#">
+                                                <div class="form__inputs">
+                                                <div class="form__group">
+														<input name="username" class="form-control" maxlength="150" autofocus="" required="" id="id_username" type="text">
+                                                        <label for="id_username">Username:</label>
+                                                        <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+                                                </div>
+                                                <div class="form__group">
+	 <input name="first_name" class="form-control" placeholder="First name" required="" maxlength="30" id="id_first_name" type="text"><label for="id_first_name">First name</label>
+                                                        
+
+                                                </div>
+                                                <div class="form__group">
+	<input name="last_name" class="form-control" placeholder="Last Name" required="" maxlength="30" id="id_last_name" type="text"><label for="id_last_name">Last name:</label> 
+                                                        
+
+                                                </div>
+                                                <div class="form__group">
+                                                        
+	 <input name="email" class="form-control" placeholder="Email" required="" maxlength="254" id="id_email" type="text"><label for="id_email">Email:</label>
+
+                                                </div>
+                                                <div class="form__group">
+                                                            <input name="password1" required="" id="id_password1" type="password"><label for="id_password1">Password:</label>  <span class="helptext">
+                                                            <ul>
+                                                                <li>Your password can't be too similar to your other personal information.</li>
+                                                                <li>Your password must contain at least 8 characters.</li>
+                                                                <li>Your password can't be a commonly used password.</li>
+                                                                <li>Your password can't be entirely numeric.</li>
+                                                            </ul></span>
+                                                        
+
+                                                </div>
+                                                <div class="form__group">
+	 <input name="password2" required="" id="id_password2" type="password"> <label for="id_password2">Password confirmation:</label><span class="helptext">Enter the same password as before, for verification.</span>                                                
+                                                </div>
+                                                </div>
+                                            
+                                                <div class="form__group">
+                                                        <button class="btn btn--primary">Create Account</button>
+                                                </div>
+                                        
+                                        </form>
+
+
+
+
+
+                                </div>
+                        
+
+
+                        </section>
+
+
+                <footer class="footer">
+                        <div class="footer__logo-box">
+                        <picture class="footer__logo">
+                                <img srcset="images/logo-green-2x.png" alt"full-logo" class="footer__logo">
+                        </div>
+                        <div class="footer__text">
+                                        <div class="footer__text--navigation">
+                                                <ul class="footer__list">
+                                                        <li class="footer__item"><a class="footer__link" href="#">Company</a></li>
+                                                        <li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
+                                                        <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
+                                                        <li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
+                                                        <li class="footer__item"><a class="footer__link" href="#">Terms</a></li>
+                                                </ul>
+                                        
+                                        </div>
+                                        <div class="footer__text--bio">
+                                                <p class="footer__copyright">
+                                                
+                                                Copyright &copy; Rental Service co.
+                                                Los Angeles-CA, USA
+                                                </p>
+                                        
+                                        </div>
+                        </div>
+                </footer>
+
+
+        </body>
+</html>

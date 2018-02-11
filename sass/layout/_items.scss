@@ -1,0 +1,30 @@
+.section{
+        display: grid;
+        margin-bottom: 10rem;
+}
+.section--cards{
+        grid-gap: 5rem;
+        justify-content: space-around;
+        min-height: 0;
+        min-width: 0;
+        grid-template-columns: repeat(auto-fit, 22rem);
+}
+
+.section--form{
+        grid-gap: 5rem;
+        justify-content: space-around;
+        min-height: 0;
+        min-width: 0;
+        &--login {
+               grid-template-columns: repeat(auto-fit, 30rem);
+        }
+        &--signup {
+               grid-template-columns: repeat(auto-fit, minmax(20rem, 50rem));
+        }
+}
+
+.section--detail{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 0 3rem;
+}

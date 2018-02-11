@@ -1,0 +1,63 @@
+.top{
+        display: grid;
+        color: $color-tertiary-lightest;
+        grid-template-areas: 
+            "hero    hero    hero    cta1"
+            "hero    hero    hero    cta2";
+
+}
+.hero {
+        background-image: linear-gradient(35deg, 
+                                rgba($color-white, .7) 0%, 
+                                rgba($color-white, .7) 40%, 
+                                transparent 40%), 
+                                url(images/test.jpg);
+        grid-area: hero;
+        min-height: 40rem;
+        background-size: cover;
+        background-position: bottom right;
+        padding: 50px;
+        display: grid;
+        justify-content: start;
+        align-content: end;
+}
+
+.hero > * {
+        background: $color-tertiary-dark;
+        padding: 5px;
+}
+
+.cta {
+        font-size: 6rem;
+        background: $color-tertiary-dark;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: start;
+
+        &__icon{
+                padding: 0, 3rem;
+        }
+}
+
+.cta p {
+        margin: 0;
+}
+
+.cta1 {
+        grid-area: cta1;
+}
+
+.cta2 {
+        grid-area: cta2;
+}
+
+.cta1{
+        gird-area: cta1;
+}
+
+.cta2{
+        gird-area: cta2;
+}

@@ -1,0 +1,150 @@
+.main-nav,
+.mobile-nav{
+
+        position: fixed;
+        top: 0;
+        right:0;
+        z-index:9999;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100px 1fr 2fr;
+        background-color:$color-tertiary-light; 
+        background: linear-gradient(to right, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, 4));
+        margin: 0;
+        box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+
+
+        @include respond(tab-port) {
+                grid-template-columns: auto 1fr;
+        }
+        
+        &__logo-box {
+                top: 0px;
+                left: 0px;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+        }
+
+        &__logo{
+                height: 35px;
+                padding: 5px;
+        }
+        
+        &__search{
+                display: grid;
+                grid-template-columns: auto, 1fr;
+                input{
+                        height: 100%;
+                        width: 100%;
+                        font-family: inherit;
+                        letter-spacing: 1px;
+                        font-size: 2rem;
+                        padding: 0 1rem;
+                        background: rgba($color-white, .2);
+                        //border: 1px solid $color-tertiary-light;
+                        border: none;
+                        font-weight: 400;
+                        transition: all .2s;
+                }
+                input::-moz-placeholder{
+                        color: $color-tertiary-lightest;
+                }
+                input:focus{
+                        color: $color-tertiary-dark;
+                        background-color: rgba($color-white, .6);
+                        outline: none;
+                }
+        }
+
+        &__nav {
+                z-index: 9999;
+                padding: 0 3rem 0 0;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+                grid-auto-flow: column;
+                grid-auto-column: auto;
+                list-style: none;
+                @include respond(tab-port) {
+                        display: none;
+                }
+
+        }
+
+        &__link{
+                display: block;
+                text-decoration: none;
+                padding: 1rem 0;
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: 900;
+                transition: background-color,color .2s;
+                border-radius: 3px;
+
+                &--active{
+                    background-color:$color-tertiary-light;
+                    //color: $color-tertiary-dark;
+                }
+        }
+        &__link:hover{
+                background-color:$color-tertiary-lightest;
+                color: $color-tertiary-dark;
+        }
+}
+
+
+
+.mobile-nav{
+        z-index: 9998;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+        background: transparent;
+        @include respond(tab-port){
+                display: block;
+        }
+
+        &__icon {
+                font-size: 5rem;
+                text-align: center;
+                color: white;
+        }
+        &__nav { 
+                display: block;
+                width: 100%;
+                padding: 0 3rem;
+        }
+
+        &__link{
+                text-decoration: none;
+                padding: 1rem 0;
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: 900;
+                transition: all .2s;
+                background: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+                border-bottom: 1px solid $color-grey-dark-2;
+
+                &--active{
+                    background: $color-tertiary-lightest;
+                    color: $color-tertiary-dark;
+                }
+        }
+        &__link:hover{
+                background: linear-gradient(to right, rgba($color-tertiary-light,.8), rgba($color-tertiary-dark, .8));
+                color: $color-white;
+        }
+        &__item{
+                display: none;
+
+                @include respond(tab-port){
+                        display: block;
+                }
+
+        }
+}
+

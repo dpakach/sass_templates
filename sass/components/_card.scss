@@ -1,0 +1,115 @@
+.card {
+        // Functionality
+
+        min-width: 0;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        background-color: $color-grey-light-1;
+        margin-bottom: 5rem;
+
+        &__picture {
+
+                background-size: cover;
+                background-position: top right;
+                height: 15rem;
+                background-blend-mode: color;
+                border-top-right-radius: 3px;
+                border-top-left-radius: 3px;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-lightest), url(images/test.jpg);
+                margin-bottom: 2rem;
+        }
+
+        &__heading{
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-align: right;
+                text-transform: uppercase;
+                color: $color-white;
+                position: absolute;
+                top: 10rem;
+                right: 2rem;
+                width: 75%;
+
+                &--form {
+                        top: 15rem;  
+                        right: 3rem;
+
+                }
+        }
+        
+        &__heading-span {
+                padding: .5rem;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+
+                background-image: linear-gradient(to right bottom, 
+                                rgba($color-tertiary-light, .85), 
+                                rgba($color-tertiary-dark, .85));
+                &--form {
+                        font-size: 3rem; 
+                        padding: 1rem;
+                        word-spacing: 2rem;
+                }
+                a {
+                        color: $color-grey-light-1;
+                }
+
+        }
+
+        &__details {
+                padding: 1rem;
+                ul {
+                        list-style: none;
+                        width: 100%;
+                        margin: 0 auto;
+
+                        li {
+                                display: grid;
+                                grid-template-columns: auto 1fr;
+                                justify-content: center;
+                                align-items: center;
+                                padding: rem;
+                                &:not(:last-child) {
+                                        border-bottom: 2px solid $color-grey-dark-2;
+                                }
+
+
+                        }
+                }
+        }
+
+        &__key {
+                font-size: 2rem;
+                padding: 0 1rem 0 0;
+                justify-content: center;
+                align-items: center;
+        }
+        &__value {
+                
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+                word-spacing: 3px;
+        }
+
+        &__form{
+                color: $black;
+                height: auto;
+
+                &--login{
+                }
+                &__picture {
+                        height: 20rem;
+                        margin-bottom: 2rem;
+                }
+
+                button{
+                        margin-bottom: 2rem;
+                }
+
+        }
+}

@@ -7,7 +7,7 @@
 }
 
 html {
-        font-size: 62,5%;
+        font-size: 62.5%;
         @include respond(tab-land) {
                 font-size: 56.25%;
         }
@@ -23,9 +23,16 @@ body{
 }
 
 .container{
+
         padding: 2rem;
-		margin-top: 5rem;
+		margin-top: 7rem;
         position: relative;
+        @include respond(tab-port){
+                margin-top: 20rem;
+        }
+        @include respond(phone){
+                margin-top: 5rem;
+        }
 }
 
 a {

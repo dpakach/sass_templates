@@ -19,15 +19,43 @@
                                 <input placeholder="Search...">
                         </div>
                         <ul class="main-nav__nav">
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">Home</a></li>
-                                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#">Rental</a></li>
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">login</a> </li>
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">signup</a></li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link main-nav__link--active" href="#">
+                                                <svg class="icon main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-home"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Home</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-office"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Rental</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link" href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-user-plus"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Signup</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link" href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Login</span>
+                                        </a>
+                                </li>
                         </ul>
                 </nav>
-                <nav class="mobile__nav">
-                        <ul class="main-nav__na">
-                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">nbsp;</a></li>
+                <nav class="mobile-nav">
+                        <ul class="mobile-nav__nav">
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">&nbsp;</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--active" href="#">Home</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Rental</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">login</a> </li>
@@ -40,6 +68,7 @@
                 <div class='container'>
 
                         <h1 class="heading-primary heading-primary--main u-margin-bottom-medium u-center-text">Rentals</h1>
+                        <a class="btn btn-text u-margin-bottom-medium u-center-text" href="">Add new</a>
                         
 
                         <section class="section section--cards">

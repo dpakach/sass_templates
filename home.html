@@ -6,8 +6,10 @@
                 <meta http-equiv="X-UA-Compatible" content="ie-edge">
                 <link rel="stylesheet" href= "style.css">
                 <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-                <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> 
+                <link rel="stylesheet" href="iconfont.css">
+	            <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
                 <title>RentalService frontend</title>
+                <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> 
                 
         </head>
         <body>
@@ -16,18 +18,48 @@
                                 <img class="main-nav__logo"src="images/logo-white.png" alt="">
                         </div>
                         <div class="main-nav__search">
-                                <input placeholder="Search...">
+                                <form action="#">
+                                    <input class="main-nav__search__input" placeholder="Search...">
+                                </form>
                         </div>
                         <ul class="main-nav__nav">
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">Home</a></li>
-                                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#">Rental</a></li>
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">login</a> </li>
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">signup</a></li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link main-nav__link--active" href="#">
+                                                <svg class="icon main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-home"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Home</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link main-nav__link--active" href="#">
+                                                <svg class="icon main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-office"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Rental</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link" href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-user-plus"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Signup</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link" href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Login</span>
+                                        </a>
+                                </li>
                         </ul>
                 </nav>
                 <nav class="mobile-nav">
                         <ul class="mobile-nav__nav">
-                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">nbsp;</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">&nbsp;</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--active" href="#">Home</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Rental</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">login</a> </li>
@@ -40,7 +72,7 @@
 
                 <div class='container'>
 
-                        <h1 class="heading-primary u-text-center u-margin-bottom-big">Rental Service</h1>
+                        <h1 class="heading-primary u-text-center u-margin-bottom-big">Rental Service jjjjj:w </h1>
 
 
                 </div>

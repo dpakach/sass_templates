@@ -1,59 +1,80 @@
 .main-nav,
 .mobile-nav{
-
         position: fixed;
         top: 0;
         right:0;
         z-index:9999;
         width: 100%;
         display: grid;
-        grid-template-columns: 100px 1fr 2fr;
+        grid-template-columns: auto 1fr 2fr;
+        grid-gap: 1rem;
+        justify-content: center;
+        align-items: center;
         background-color:$color-tertiary-light; 
-        background: linear-gradient(to right, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, 4));
+        background: linear-gradient(to right, rgba($color-tertiary-light, 1), rgba($color-tertiary-dark, 1));
         margin: 0;
         box-shadow: 0 .5rem 2rem rgba($color-black, .2);
 
 
         @include respond(tab-port) {
-                grid-template-columns: auto 1fr;
+                grid-template-columns: 1fr;
+                grid-gap: 0;
         }
         
         &__logo-box {
-                top: 0px;
-                left: 0px;
                 display: grid;
                 justify-content: center;
                 align-content: center;
+                height: 5rem;
         }
 
         &__logo{
-                height: 35px;
-                padding: 5px;
+                height: 4rem;
+                @include respond(tab-port) {
+                        height: 3rem;
+                }
         }
         
         &__search{
                 display: grid;
                 grid-template-columns: auto, 1fr;
-                input{
+                align-items: center;
+                form{
                         height: 100%;
-                        width: 100%;
-                        font-family: inherit;
-                        letter-spacing: 1px;
-                        font-size: 2rem;
-                        padding: 0 1rem;
-                        background: rgba($color-white, .2);
-                        //border: 1px solid $color-tertiary-light;
-                        border: none;
-                        font-weight: 400;
-                        transition: all .2s;
-                }
-                input::-moz-placeholder{
-                        color: $color-tertiary-lightest;
-                }
-                input:focus{
-                        color: $color-tertiary-dark;
-                        background-color: rgba($color-white, .6);
-                        outline: none;
+                        input{
+
+                                height: 7.3rem;
+                                width: 100%;
+                                font-family: inherit;
+                                letter-spacing: 1px;
+                                font-size: 2rem;
+                                padding: 0 1rem;
+                                background: rgba($color-white, .2);
+                                border: none;
+                                font-weight: 400;
+                                transition: background-color .2s;
+                                @include respond(tab-port){
+                                        height: 4.2rem;
+                                }
+                        }
+                        input::-moz-placeholder{
+                                color: $color-tertiary-dark;
+                                font-size: 5rem;
+                                font-weight: 300;
+                                @include respond(tab-port){
+                                    font-size: 3rem;
+                                }
+                        }
+                        input::-webkit-placeholder{
+                                color: $color-tertiary-dark;
+                                font-size: 5rem;
+                                font-weight: 300;
+                        }
+                        input:focus{
+                                outline: none;
+                                color: $color-tertiary-dark;
+                                background-color: rgba($color-tertiary-lightest, .6);
+                        }
                 }
         }
 
@@ -66,32 +87,51 @@
                 grid-auto-flow: column;
                 grid-auto-column: auto;
                 list-style: none;
-                @include respond(tab-port) {
+                @include respond(phone) {
                         display: none;
                 }
-
         }
 
         &__link{
-                display: block;
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                align-items: center;
                 text-decoration: none;
-                padding: 1rem 0;
+                padding: 0 0 0 0;
                 text-align: center;
                 color: white;
                 text-transform: uppercase;
                 font-size: 1.5rem;
-                font-weight: 900;
+                font-weight: 500;
                 transition: background-color,color .2s;
                 border-radius: 3px;
+                &__text{
+
+                }
+
+                &__icon{
+                        height: 3rem;
+                        width: 3rem;
+                        margin: 1rem auto;
+                        fill: $color-tertiary-lightest;
+                }
 
                 &--active{
-                    background-color:$color-tertiary-light;
-                    //color: $color-tertiary-dark;
+                    background-color:$color-tertiary-lightest;
+                    color: $color-tertiary-dark;
+                    & .icon{
+                            fill: $color-tertiary-dark;
+                    }
                 }
         }
+
         &__link:hover{
-                background-color:$color-tertiary-lightest;
-                color: $color-tertiary-dark;
+                background: rgba($color-tertiary-lightest, .5);
+                color: $color-white;
+        }
+        &__link:hover &__link__icon{
+                fill: $color-tertiary-dark;
         }
 }
 
@@ -102,9 +142,6 @@
         grid-template-columns: 1fr;
         grid-gap: 3rem;
         background: transparent;
-        @include respond(tab-port){
-                display: block;
-        }
 
         &__icon {
                 font-size: 5rem;
@@ -114,7 +151,7 @@
         &__nav { 
                 display: block;
                 width: 100%;
-                padding: 0 3rem;
+                padding: 0;
         }
 
         &__link{
@@ -125,13 +162,17 @@
                 text-transform: uppercase;
                 font-size: 1.5rem;
                 font-weight: 900;
-                transition: all .2s;
+                transition: background-color,color .2s;
                 background: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
-                border-bottom: 1px solid $color-grey-dark-2;
+                border-bottom: 1px solid $color-tertiary-light;
 
                 &--active{
                     background: $color-tertiary-lightest;
                     color: $color-tertiary-dark;
+                    &:hover{
+                            background: $color-tertiary-lightest !important;
+                            color: $color-tertiary-dark !important;
+                    }
                 }
         }
         &__link:hover{
@@ -141,7 +182,7 @@
         &__item{
                 display: none;
 
-                @include respond(tab-port){
+                @include respond(phone){
                         display: block;
                 }
 

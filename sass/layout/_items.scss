@@ -1,13 +1,14 @@
 .section{
         display: grid;
         margin-bottom: 10rem;
+        font-size: 1.5rem;
 }
+
 .section--cards{
-        grid-gap: 5rem;
+        grid-gap: 10rem;
         justify-content: space-around;
-        min-height: 0;
-        min-width: 0;
-        grid-template-columns: repeat(auto-fit, 22rem);
+        grid-template-columns: repeat(auto-fit, 25rem);
+        font-size: 1.5rem;
 }
 
 .section--form{
@@ -15,8 +16,10 @@
         justify-content: space-around;
         min-height: 0;
         min-width: 0;
+        font-size: 1.5rem;
         &--login {
-               grid-template-columns: repeat(auto-fit, 30rem);
+               grid-template-columns: repeat(auto-fit, 40rem);
+
         }
         &--signup {
                grid-template-columns: repeat(auto-fit, minmax(20rem, 50rem));
@@ -24,7 +27,14 @@
 }
 
 .section--detail{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 120rem));
         justify-content: center;
         padding: 0 3rem;
+        font-size: 1.5rem;
+}
+.section--profile{
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 120rem));
+        justify-content: center;
+        padding: 0 3rem;
+        font-size: 1.5rem;
 }

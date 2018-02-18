@@ -1,0 +1,83 @@
+.profile{
+        //background-color: linear-gradient(to right, rgba($color-tertiary-dark,1 ), rgba($color-tertiary-light, 1));
+        background: linear-gradient(to right, $color-tertiary-dark, $color-tertiary-light);
+        color: $color-white;
+        box-shadow: 0rem 1rem 4rem rgba($color-black, .5);
+
+        &__head{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 0;
+        grid-template-columns: auto 1fr;
+        padding-bottom: 2rem;
+
+        border-bottom: 1px solid linear-gradient(to right, $color-tertiary-dark, $color-tertiary-light);
+
+        }
+        &__line{
+                height: 10px;
+                background: linear-gradient(to right, transparent, $color-tertiary-light, transparent);
+                width: 100%;
+                &--small{
+                    height: 5px;
+                }
+        }
+
+        &__photo{
+
+                img {
+                        height: 15rem;
+                        border-radius: 2px;
+                }
+        }
+        &__title{
+                padding: 1rem 2rem;
+        }
+
+        &__about{
+                padding: 3rem;
+                font-size: 1.4rem;
+        }
+
+        &__info{
+                margin-top: 3rem;
+                padding: 1rem 5rem;
+                &__item{
+                        display: grid;
+                        grid-template-columns: 1fr 2fr;
+                        align-items: center;
+                        grid-gap: 2rem;
+                        font-size: 1.5rem;
+
+                        
+                        .name{
+                                text-align: right;
+                                border-right: 2px solid $color-tertiary-light;
+                                padding: 1rem 2rem;
+                                height: 100%;
+                        }
+                        .value{
+                                padding: 1rem 0rem;
+                        }
+
+                }
+
+        }
+}
+
+.heading-user{
+        background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-lightest);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: 400;
+        &--main {
+
+        }
+        &--sub {
+                font-size: 2.5rem;
+                font-weight: 300;
+                color: white;
+
+        }
+}

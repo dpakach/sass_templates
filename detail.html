@@ -19,21 +19,50 @@
                                 <input placeholder="Search...">
                         </div>
                         <ul class="main-nav__nav">
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">Home</a></li>
-                                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#">Rental</a></li>
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">login</a> </li>
-                                <li class="main-nav__item"><a class="main-nav__link" href="#">signup</a></li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link main-nav__link--active" href="#">
+                                                <svg class="icon main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-home"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Home</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-office"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Rental</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link" href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-user-plus"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Signup</span>
+                                        </a>
+                                </li>
+                                <li class="main-nav__item">
+                                        <a  class="main-nav__link" href="#">
+                                                <svg class="main-nav__link__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                                                </svg>
+                                                <span class="main-nav__link__text">Login</span>
+                                        </a>
+                                </li>
                         </ul>
                 </nav>
-                <nav class="mobile__nav">
-                        <ul class="main-nav__na">
-                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">nbsp;</a></li>
+                <nav class="mobile-nav">
+                        <ul class="mobile-nav__nav">
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">&nbsp;</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--active" href="#">Home</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Rental</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">login</a> </li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">signup</a></li>
                         </ul>
                 </nav>
+
 
 
                 <div class='container'>
@@ -46,13 +75,22 @@
                                                 </h1>
                                         </div>
                                         <div class="cta cta1">
-                                                <span class="cta__icon"><i class="icon-basic-info"></i></span><p class="cta__value">$500</p>
+                                                <svg class="cta__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-price-tags"></use>
+                                                </svg>
+                                                <p class="cta__value">$500</p>
                                         </div>
                                         <div class="cta cta2">
-                                                <span class="cta__icon"><i class="icon-basic-star"></i></span><p class="cta__value">4.7</p>
+                                                <svg class="cta__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-star"></use>
+                                                </svg>
+                                                <p class="cta__value">4.7</p>
                                         </div>
                                         <div class="cta cta3">
-                                                <span class="cta__icon"><i class="icon-basic-message"></i></span><p class="cta__value">30 intrested</p>
+                                                <svg class="cta__icon">
+                                                    <use xlink:href="images/sprite.svg#icon-thumbs-up"></use>
+                                                </svg>
+                                                <p class="cta__value">30 intrested</p>
                                         </div>
                                 </div>
                                 <div class="description">
@@ -86,7 +124,10 @@
                                         <div class="options__cta">
                                             <div class="options__user-info">
                                                 <h3 class="heading-tertiary u-center-text">Added by</h3>
-                                                <div class="options__photo"><img src="images/test.jpg" alt=""></div>
+                                                <div class="options__shape">
+                                                        <img src="images/test.jpg" alt="peron on  a tour" class="story__img">
+
+                                                </div>
                                                 <h4 class="options__username">Daniel Fakeman</h4>
                                             </div>
                                             <div class="options__buttons">
@@ -119,7 +160,6 @@
                                     
 
                                         <div class="story">
-                                                <div>
                                                         <figure class="story__shape">
                                                                 <img src="images/test.jpg" alt="peron on  a tour" class="story__img">
                                                                 <figcaption class="story__caption">
@@ -127,7 +167,6 @@
                                                                 </figcaption>
 
                                                         </figure>
-                                                </div>
                                                         <div class="story__text">
                                                                 <div class="story__text--heading">
                                                                     <h3 class="heading-tertiary">Amet culpa</h3>

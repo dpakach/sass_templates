@@ -20,11 +20,9 @@
 
 
         &__shape {
-                grid-area: figure;
                 width: 15rem;
                 height: 15rem;
-                background-color: orangered;
-                float: left;
+                background-color: transparent;
                 -webkit-shape-outside: circle(50% at 50% 50%);
                 shape-outside: circle(50% at 50% 50%);
                 -webkit-clip-path: circle(50% at 50% 50%);
@@ -38,6 +36,7 @@
         &__img {
                 height: 100%;
                 transform: scale(1);
+                margin: 0 auto;
         }
 
         &__text {

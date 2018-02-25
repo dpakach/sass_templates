@@ -16,7 +16,6 @@
 
 }
 .hero {
-        background-image:linear-gradient(to right, rgba($color-black, .7), transparent), url(images/test.jpg);
         grid-area: hero;
         min-height: 60vh;
         background-size: cover;
@@ -24,6 +23,13 @@
         display: grid;
         justify-content: start;
         align-content: end;
+        transition: all .2s;
+        background-image:linear-gradient(to right, rgba($color-white, .4), rgba($color-white, .4)), url(images/test.jpg);
+        &:hover{
+                background-image:linear-gradient(to right, rgba($color-black, 0), rgba($color-black, 0)), url(images/test.jpg);
+                .hero__text{
+                }
+        }
 
 
         @include respond(tab-port){
@@ -31,7 +37,7 @@
         }
 
         @include respond(phone){
-                min-height: 20vh;
+                min-height: 40vh;
         }
 }
 
@@ -144,9 +150,10 @@
         &__shape {
                 width: 10rem;
                 height: 10rem;
-                clip-path: circle(50% at 50% 50%);
-                display: inline
--block;
+                border-radius: 50%;
+
+                overflow: hidden;
+                display: inline-block;
                 margin: 0 auto;
                 img {
                         display: block;
@@ -180,6 +187,13 @@
                 }
         }
         &__button{
+                &:link,
+                &:visited{
+                        border: 2px solid $color-tertiary-lightest;
+                }
+                &:hover{
+                        border: 2px solid transparent;
+                }
                 margin: 0;
                 font-weight: 400;
                 @include respond(phone){

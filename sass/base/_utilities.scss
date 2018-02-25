@@ -34,3 +34,10 @@
         }
 }
 
+.u-hide-me{
+        &--phone{
+                @include respond(phone){
+                        display: none;
+                }
+        }
+}

@@ -10,39 +10,65 @@ body{
         font-size: 4rem;
         font-weight: 400;
         text-transform: uppercase;
-        backface-visibility: hidden;
+        display: block;
         background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
         -webkit-background-clip: text;
         color: transparent;
+        letter-spacing: .2rem;
+        text-align: center;
+
+
+        &--header{
+                color: $color-grey-light-1;
+        }
         &--main{
-                display: block;
                 letter-spacing: 1rem;
         }
-
-
         &--sub{
-                display: block;
                 font-size: 2rem;
                 font-weight: 700;
-                letter-spacing: 17.4px;
-                animation: moveInRight 1s ease-out;
+                letter-spacing: 1rem;
+        }
+        @include respond(tab-port){
+                font-size: 4rem;
+        }
+        @include respond(phone){
+                font-size: 3rem;
         }
 }
 
 .heading-secondary {
+        text-align: center;
         font-size: 3rem;
         text-transform: uppercase;
         font-weight: 700;
-        display: inline-block;
+        display: block;
         background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
         -webkit-background-clip: text;
         color: transparent;
         letter-spacing: .2rem;
         transition: all 0.2s;
+        @include respond(tab-port) {
+                font-size: 3rem;
+        }
+        @include respond(phone) {
+                font-size: 2.5rem;
+        }
 }
 
 .heading-tertiary {
-        font-size: $default-font-size;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include respond(tab-port){
+                font-size: 2.5rem;
+        }
+        @include respond(phone){
+                font-size: 2rem;
+        }
+}
+.heading-quadnary {
+        font-size: 2rem;
         font-weight: 700;
         text-transform: uppercase;
 }

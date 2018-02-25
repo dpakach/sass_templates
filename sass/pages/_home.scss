@@ -1,0 +1,63 @@
+.message{
+        font-size: 2rem;
+        background-color: $color-grey-light-1;
+        padding: 5rem;
+        text-align: center;
+        width: 60%;
+        margin: 15rem auto;
+        box-shadow: 0 0 4rem rgba($color-black, .3);
+        border: 3px solid $color-tertiary-light;
+        border-radius: 4rem;
+
+        &--error{
+            box-shadow: 0 0 4rem rgba($color-secondary-dark, .3);
+            border: 3px solid $color-secondary-dark;
+            background-color: rgba($color-secondary-dark, .2);
+            color: orangered;
+        }
+        @include respond(phone){
+                font-size: 1.5rem;
+                padding: 2rem;
+        }
+}
+
+.step{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 60rem;
+
+        padding: 2rem;
+        box-shadow: 0 0 2rem rgba($color-black, .2);
+        &__icon-div{
+                position: relative;
+                padding-bottom: 3rem;
+        }
+
+
+        &__text{
+                margin: 2rem auto;
+                font-size: 2rem;
+                text-align: center;
+        }
+        &__number-box{
+                border: 5px solid $color-tertiary-light;
+                margin: 0 auto;
+                display: block;
+                height: 12rem;
+                width: 12rem;
+                padding: 2rem;
+                border-radius: 50%;
+        }
+        &__number{
+                display: grid;
+                justify-content: center; 
+                align-items: center;
+                font-size: 4rem;
+                font-weight: 900;
+                color: $color-tertiary-light;
+
+        }
+}

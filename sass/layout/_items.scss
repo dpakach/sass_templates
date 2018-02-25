@@ -7,8 +7,12 @@
 .section--cards{
         grid-gap: 10rem;
         justify-content: space-around;
-        grid-template-columns: repeat(auto-fit, 25rem);
+        grid-template-columns: repeat(auto-fit, 30rem);
         font-size: 1.5rem;
+        padding: 0 10rem;
+        @include respond(tab-port){
+                padding: 0 ;
+        }
 }
 
 .section--form{
@@ -37,4 +41,15 @@
         justify-content: center;
         padding: 0 3rem;
         font-size: 1.5rem;
+}
+
+.section--steps{
+        grid-template-columns: repeat(3, minmax(20rem, 40rem));
+        grid-gap: 10rem;
+        justify-content: space-around;
+        padding: 0 5rem;
+        font-size: 1.5rem;
+        @include respond(tab-port){
+                grid-template-columns: minmax(20rem, 40rem);
+        }
 }

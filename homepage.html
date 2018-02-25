@@ -6,9 +6,11 @@
                 <meta http-equiv="X-UA-Compatible" content="ie-edge">
                 <link rel="stylesheet" href= "style.css">
                 <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-                <link rel="stylesheet" href="iconfont.css">
-                <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> 
+                <link rel="stylesheet" href="iconfont-arrow.css">
+	            <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
                 <title>RentalService frontend</title>
+                <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> 
+                
         </head>
         <body>
                 <nav class="main-nav">
@@ -16,7 +18,9 @@
                                 <img class="main-nav__logo"src="images/logo-white.png" alt="">
                         </div>
                         <div class="main-nav__search">
-                                <input placeholder="Search...">
+                                <form action="#">
+                                    <input class="main-nav__search__input" placeholder="Search...">
+                                </form>
                         </div>
                         <ul class="main-nav__nav">
                                 <li class="main-nav__item">
@@ -28,8 +32,8 @@
                                         </a>
                                 </li>
                                 <li class="main-nav__item">
-                                        <a  class="main-nav__link href="#">
-                                                <svg class="main-nav__link__icon">
+                                        <a  class="main-nav__link" href="#">
+                                                <svg class="icon main-nav__link__icon">
                                                     <use xlink:href="images/sprite.svg#icon-office"></use>
                                                 </svg>
                                                 <span class="main-nav__link__text">Rental</span>
@@ -56,6 +60,7 @@
                 <nav class="mobile-nav">
                         <ul class="mobile-nav__nav">
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">&nbsp;</a></li>
+                                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">&nbsp;</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--active" href="#">Home</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Rental</a></li>
                                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">login</a> </li>
@@ -64,13 +69,88 @@
                 </nav>
 
 
+                
 
                 <div class='container'>
+                        <header class="header u-margin-bottom-big">
+                                <div class="header__logo-box">
+                                        <img srg="img/logo-white.png" alt="Logo" class="header__logo">
+                                </div>
 
-                        <h1 class="heading-primary  u-margin-bottom-medium u-center-text">Rentals</h1>
-                        <a class="btn btn--rentaladd u-margin-bottom-medium u-center-text" href="">Add new</a>
+                                <div class="header__text-box">
+                                        <h1 class="heading-primary u-margin-bottom-big">
+                                                <span class="heading-primary--main heading-primary--header"><p>Rental Service</p></span>
+                                                <span class="heading-primary--sub heading-primary--header"><p>Renting made easy</p></span>
+                                        </h1>
+                                        <a href="#tours" class="btn btn--header">Start Renting</a>
+                                </div>
+                                <div class="discover row">
+                                        <h3 class="discover-text">Discover more</h3>
+                                        <a href="#section-steps" class="btn btn-discover">
+                                            <i class="discover-arrow icon-arrows-down"></i>
+                                        </a>
+
+                                </div>
+                        </header>
                         
 
+                        <div id="section-steps">
+                                        
+                        <h2 class=" heading-primary u-center-text u-margin-top-big">Having a problem starting up</h2>
+                        </br>
+                        <h3 class=" heading-secondary u-center-text u-margin-bottom-big">It's really easy</h3>
+
+                        <div class="section section--steps">
+                                <div class="step">
+                                        <div class="step__icon-div">
+                                                <span class="step__number-box">
+                                                        <div class="step__number">1</div>
+                                                </span>
+                                        
+                                        </div>
+                                        <div class="profile__line profile__line--small">
+                                        </div>
+                                        <div class="step__text">
+                                                <h3 class="heading-tertiary u-margin-bottom-small">Create an account</h3>
+                                                <p>Adipisicing numquam repellendus dicta iste perferendis Laudantium ipsum dolore fugiat sit quae, cum Non ducimus adipisci molestias dolor perferendis sint, repudiandae. Ducimus doloremque necessitatibus illum odit doloribus laborum Laudantium eveniet?</p>
+                                        
+                                        </div>
+                                </div>
+                                <div class="step">
+                                        <div class="step__icon-div">
+                                                <span class="step__number-box">
+                                                        <div class="step__number">2</div>
+                                                </span>
+                                        
+                                        </div>
+                                        <div class="profile__line profile__line--small">
+                                        </div>
+                                        <div class="step__text">
+                                                <h3 class="heading-tertiary u-margin-bottom-small">Browse for rental</h3>
+                                                <p>Adipisicing numquam repellendus dicta iste perferendis Laudantium ipsum dolore fugiat sit quae, cum Non ducimus adipisci molestias dolor perferendis sint, repudiandae. Ducimus doloremque necessitatibus illum odit doloribus laborum Laudantium eveniet?</p>
+                                        
+                                        </div>
+                                </div>
+                                <div class="step">
+                                        <div class="step__icon-div">
+                                                <span class="step__number-box">
+                                                        <div class="step__number">3</div>
+                                                </span>
+                                        
+                                        </div>
+                                        <div class="profile__line profile__line--small">
+                                        </div>
+                                        <div class="step__text">
+                                                <h3 class="heading-tertiary u-margin-bottom-small">Update your profile</h3>
+                                                <p>Adipisicing numquam repellendus dicta iste perferendis Laudantium ipsum dolore fugiat sit quae, cum Non ducimus adipisci molestias dolor perferendis sint, repudiandae. Ducimus doloremque necessitatibus illum odit doloribus laborum Laudantium eveniet?</p>
+                                        
+                                        </div>
+                                </div>
+                        </div>
+</div>
+
+
+                        <h2 class="heading-primary u-margin-bottom-medium u-center-text">Your Rentals</h2>
                         <section class="section section--cards">
                         
                                 <div class="card">
@@ -139,155 +219,23 @@
 
                                 
                                 </div>
-                                <div class="card">
-
-                                        <div class="card__picture">
-                                                &nbsp;
-                                        </div>
-                                        <h4 class="card__heading">
-                                                <span class="card__heading-span">
-                                                        New Home
-                                                </span>
-
-                                        </h4>
-                                        <div class="card__details">
-                                                <ul>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-info"></i></span><span class="card__value">Small house in peaceful environment for lakeside</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-star"></i></span><span class="card__value">4.5</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-message-multiple"></i></span><span class="card__value">30</span></li>
-                                                </ul>
-
-                                        </div>
-
-                                
-                                </div>
-                                <div class="card">
-
-                                        <div class="card__picture">
-                                                &nbsp;
-                                        </div>
-                                        <h4 class="card__heading">
-                                                <span class="card__heading-span">
-                                                        New Home
-                                                </span>
-
-                                        </h4>
-                                        <div class="card__details">
-                                                <ul>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-info"></i></span><span class="card__value">Small house in peaceful environment for lakeside</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-star"></i></span><span class="card__value">4.5</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-message-multiple"></i></span><span class="card__value">30</span></li>
-                                                </ul>
-
-                                        </div>
-
-                                
-                                </div>
-
-                               <div class="card">
-
-                                        <div class="card__picture">
-                                                &nbsp;
-                                        </div>
-                                        <h4 class="card__heading">
-                                                <span class="card__heading-span">
-                                                        New Home
-                                                </span>
-
-                                        </h4>
-                                        <div class="card__details">
-                                                <ul>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-info"></i></span><span class="card__value">Small house in peaceful environment for lakeside</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-star"></i></span><span class="card__value">4.5</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-message-multiple"></i></span><span class="card__value">30</span></li>
-                                                </ul>
-
-                                        </div>
-
-                                
-                                </div>
-                                <div class="card">
-
-                                        <div class="card__picture">
-                                                &nbsp;
-                                        </div>
-                                        <h4 class="card__heading">
-                                                <span class="card__heading-span">
-                                                        New Home
-                                                </span>
-
-                                        </h4>
-                                        <div class="card__details">
-                                                <ul>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-info"></i></span><span class="card__value">Small house in peaceful environment for lakeside</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-star"></i></span><span class="card__value">4.5</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-message-multiple"></i></span><span class="card__value">30</span></li>
-                                                </ul>
-
-                                        </div>
-
-                                
-                                </div>
-                                <div class="card">
-
-                                        <div class="card__picture">
-                                                &nbsp;
-                                        </div>
-                                        <h4 class="card__heading">
-                                                <span class="card__heading-span">
-                                                        New Home
-                                                </span>
-
-                                        </h4>
-                                        <div class="card__details">
-                                                <ul>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-info"></i></span><span class="card__value">Small house in peaceful environment for lakeside</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-star"></i></span><span class="card__value">4.5</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-message-multiple"></i></span><span class="card__value">30</span></li>
-                                                </ul>
-
-                                        </div>
-
-                                
-                                </div>
-
-                                <div class="card">
-
-                                        <div class="card__picture">
-                                                &nbsp;
-                                        </div>
-                                        <h4 class="card__heading">
-                                                <span class="card__heading-span">
-                                                        New Home
-                                                </span>
-
-                                        </h4>
-                                        <div class="card__details">
-                                                <ul>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-info"></i></span><span class="card__value">Small house in peaceful environment for lakeside</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-star"></i></span><span class="card__value">4.5</span></li>
-                                                        <li><span class="card__key"><i class="feature-box__icon icon-basic-message-multiple"></i></span><span class="card__value">30</span></li>
-                                                </ul>
-
-                                        </div>
-
-                                
-                                </div>
-
-
-
-
-
                         </section>
+                        <a class="btn btn--rentaladd u-margin-bottom-medium u-center-text" href="">View All</a>
+
+                </div>
+                
+
 
 
                 <footer class="footer">
                         <div class="footer__logo-box">
                         <picture class="footer__logo">
-                                <img srcset="images/logo-green-2x.png" alt"full-logo" class="footer__logo">
+                                <img srcset="images/logo-green-2x.png, img/nat-7.jpg 2x" alt"full-logo" class="footer__logo">
                         </div>
-                        <div class="footer__text">
-                                        <div class="footer__text--navigation">
+                               
+                        <div class="row">
+                                <div class="col-1-of-2">
+                                        <div class="footer__navigation">
                                                 <ul class="footer__list">
                                                         <li class="footer__item"><a class="footer__link" href="#">Company</a></li>
                                                         <li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
@@ -297,17 +245,62 @@
                                                 </ul>
                                         
                                         </div>
-                                        <div class="footer__text--bio">
-                                                <p class="footer__copyright">
-                                                
-                                                Copyright &copy; Rental Service co.
-                                                Los Angeles-CA, USA
-                                                </p>
+                                </div>
+                                <div class="col-1-of-2">
+                                        <p class="footer__copyright">
                                         
-                                        </div>
+                                        Copyright &copy; Rental Service co.
+                                        Los Angeles-CA, USA
+                                        </p>
+                                
+                                </div>
                         </div>
                 </footer>
 
 
+
+
+
+<script
+			  src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+			  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+                          crossorigin="anonymous"></script>
+                          
+<!--         
+        <script>
+                // Create the dropdown base
+$("<select />").appendTo("nav");
+
+// Create default option "Go to..."
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Go to..."
+}).appendTo("nav select");
+
+// Populate dropdown with menu items
+$("nav a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("nav select");
+});
+
+$("nav select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+        </script> -->
+
+
         </body>
 </html>
+ <!-- <ul class="main-nav__nav">
+                                        <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#">Home</a></li>
+                                        <li class="main-nav__item"><a class="main-nav__link" href="#">Rental</a></li>
+                                        <li class="main-nav__item"><a class="main-nav__link" href="#">login</a> </li>
+                                        <li class="main-nav__item"><a class="main-nav__link" href="#">signup</a></li>
+                        </ul> 
+                        <select class="main-nav__select">
+                                
+                        </select> -->

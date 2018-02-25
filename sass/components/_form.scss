@@ -1,6 +1,9 @@
 .form {
-        margin: 0 auto;
+        p{
+                margin-bottom: 2rem;
+        }
 
+        margin: 0 auto;
         padding: 0 3rem;
 
         &__inputs{
@@ -14,6 +17,13 @@
                 display: grid;
                 grid-template-rows: auto auto 1fr;
                 align-items: start;
+        }
+        &--fullscreen{
+                width: 40rem;
+                padding: 0;
+                @include respond(phone){
+                        width: 30rem;
+                }
         }
         .errorlist{
 
@@ -51,6 +61,7 @@
                 &::-webkit-input-placeholder {
                         color: $color-grey-dark-2;
                 }
+
         }
 
         &__label ,
@@ -71,7 +82,7 @@
                 transform: translateX(4rem);
         }
 
-        .helptext {
+        ul, .helptext {
                 font-size: 1.2rem;
                 color: $color-grey-dark-4;
                 margin: 0 0 0 3.5rem;
@@ -80,12 +91,6 @@
                 display: inline-block;
         }
 
-        ul {
-                list-style: none;
-                font-size: 1.2rem;
-                color: $color-grey-dark-4;
-                margin: 0;
-        }
 
 }
 

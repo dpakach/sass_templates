@@ -70,9 +70,6 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 35%; } }
 
 body {
   box-sizing: border-box;
@@ -105,10 +102,10 @@ body {
   color: #777; }
 
 .heading-primary {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 400;
   text-transform: uppercase;
-  display: block;
+  display: inline-block;
   background-image: linear-gradient(to right, #406e8e, #161925);
   -webkit-background-clip: text;
   color: transparent;
@@ -131,10 +128,10 @@ body {
 
 .heading-secondary {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: 700;
-  display: block;
+  display: inline-block;
   background-image: linear-gradient(to right, #406e8e, #161925);
   -webkit-background-clip: text;
   color: transparent;
@@ -148,7 +145,7 @@ body {
       font-size: 2.5rem; } }
 
 .heading-tertiary {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase; }
   @media only screen and (max-width: 56.25em) {
@@ -1060,8 +1057,7 @@ body {
   .message--error {
     box-shadow: 0 0 4rem rgba(255, 119, 48, 0.3);
     border: 3px solid #ff7730;
-    background-color: rgba(255, 119, 48, 0.2);
-    color: orangered; }
+    background-color: rgba(255, 119, 48, 0.2); }
   @media only screen and (max-width: 37.5em) {
     .message {
       font-size: 1.5rem;

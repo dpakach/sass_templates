@@ -15,6 +15,10 @@ html {
         @include respond(tab-port) {
                 font-size: 50%;
         }
+
+        @include respond(phone){
+                font-size: 35%;
+        }
 }
 
 body{
@@ -25,16 +29,24 @@ body{
 .container{
 
         padding: 2rem;
-		margin-top: 7rem;
+		margin-top: 8.4rem;
         position: relative;
+        min-height: 55vh;
         @include respond(tab-port){
                 margin-top: 20rem;
         }
         @include respond(phone){
-                margin-top: 5rem;
+                margin-top: 4rem;
         }
 }
 
 a {
+        color: $color-tertiary-light;
         text-decoration: none;
+}
+
+::selection{
+        background-color: rgba($color-tertiary-light, .6);
+        color: $color-white;
+
 }

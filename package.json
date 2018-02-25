@@ -4,8 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass_part/sass/main.scss sass_part/style.css -w",
-    "compile:sasss": "node-sass sass_part/sass/main.scss RentalService/static/css/style.css -w"
+    "//": "run live server",
+    "devserver": "live-server",
+
+    "//": "start development env",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    
+    "//": "compile sass files to a single file",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    
+    "//": "compile sass files for development",
+    "watch:sass": "node-sass sass/main.scss style.css -w",
+    
+    "//": "concat css files into  a single file",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css iconfont.css",
+    
+    "//": "auto prefix the css files",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    
+    "//": "compress the prefixed file to a .min file",
+    "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed",
+    
+    "//": "build process",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +35,9 @@
     "node-sass": "^4.7.2"
   },
   "devDependencies": {
-    "live-server": "^1.2.0"
+    "concat": "^1.0.3",
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.1.2",
+    "postcss": "^6.0.19"
   }
 }

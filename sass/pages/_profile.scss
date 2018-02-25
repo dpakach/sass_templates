@@ -2,17 +2,25 @@
         //background-color: linear-gradient(to right, rgba($color-tertiary-dark,1 ), rgba($color-tertiary-light, 1));
         background: linear-gradient(to right, $color-tertiary-dark, $color-tertiary-light);
         color: $color-white;
-        box-shadow: 0rem 1rem 4rem rgba($color-black, .5);
+        box-shadow: 0rem 0rem 2rem rgba($color-black, .5);
+        animation-name: moveInRight;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
+        overflow: hidden;
+
+        &:hover{
+                box-shadow: 0rem 0rem 2rem rgba($color-black, .7);
+        }
 
         &__head{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-gap: 0;
-        grid-template-columns: auto 1fr;
-        padding-bottom: 2rem;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                grid-gap: 0;
+                grid-template-columns: auto 1fr;
+                padding-bottom: 2rem;
 
-        border-bottom: 1px solid linear-gradient(to right, $color-tertiary-dark, $color-tertiary-light);
+                border-bottom: 1px solid linear-gradient(to right, $color-tertiary-dark, $color-tertiary-light);
 
         }
         &__line{
@@ -25,10 +33,16 @@
         }
 
         &__photo{
-
+                overflow: hidden;
+                border-radius: 50%;
+                margin: 1rem;
+                position: relative;
+                height: 15rem;
+                width: 15rem;
+                border: 2px solid $color-tertiary-lightest;
                 img {
-                        height: 15rem;
-                        border-radius: 2px;
+                        min-width: 100%;
+                        @include absCenter;
                 }
         }
         &__title{
@@ -42,7 +56,7 @@
 
         &__info{
                 margin-top: 3rem;
-                padding: 1rem 5rem;
+                padding: 1rem;
                 &__item{
                         display: grid;
                         grid-template-columns: 1fr 2fr;

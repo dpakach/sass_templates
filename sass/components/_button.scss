@@ -13,6 +13,7 @@
             margin: 0 auto;
             display: block;
             transition: all .2s;
+            text-align: center;
 
             //change for <button> element
             border:none;
@@ -22,13 +23,13 @@
         &:hover
         {
                 box-shadow: .5 .5rem 2rem rgba($color-black,0.2);
+                transform: scale(1.1);
 
         }
 
         &:focus,
         &:active{
                 outline: none;
-                transform: translateY(-1px);
                 box-shadow: 0 5px 10px rgba($color-black,0.2);
         }
 
@@ -58,6 +59,61 @@
                         border: 2px solid transparent;
                         color: $color-white;
                 }
+        }
+        &--header{
+                width: 25rem;
+                color: $color-white;
+                &:link,
+                &visited{
+                        font-size: 2rem;
+                        display: grid;
+                        grid-template-columns: auto;
+                        background-image: linear-gradient(120deg, 
+                                        transparent 0%, 
+                                        transparent 50%, 
+                                        rgba($color-white, .5) 50%,
+                                        rgba($color-white, .5) 100%
+                                        );
+                        background-size: 220%;
+                        transition: all .4s;
+                        border: 2px solid $color-white;
+                }
+                &:hover,
+                &:active,{
+                        color: $color-tertiary-dark;
+                        background-position: 100%;
+                        transform: scale(1.1);
+                        border: 2px solid transparent;
+                }
+        }
+        &--rentaladd{
+                width: 30rem;
+                color: $color-white;
+                &:link,
+                &visited{
+                        font-size: 2rem;
+                        display: grid;
+                        grid-template-columns: auto;
+                        background-image: linear-gradient(120deg, 
+                                        $color-tertiary-light 0%, 
+                                        $color-tertiary-dark 50%, 
+                                        $color-tertiary-light 50%,
+                                        $color-tertiary-light 100%
+                                        );
+                        background-size: 220%;
+                        transition: all .4s;
+                }
+                &:hover,
+                &:active,{
+                        color: $color-white;
+                        background-position: 100%;
+                        transform: scale(1.1);
+                }
+        }
+        &--active{
+                background-color: rgba($color-white, .3);
+                border: 2px solid transparent;
+                color: $color-white;
         }
 
 }

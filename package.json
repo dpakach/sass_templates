@@ -14,7 +14,7 @@
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     
     "//": "compile sass files for development",
-    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "watch:sass": "node-sass sass/main.scss html_files/style.css -w",
     
     "//": "concat css files into  a single file",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css iconfont.css",

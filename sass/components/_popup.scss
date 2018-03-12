@@ -1,0 +1,43 @@
+.popup{
+        padding-top: 15rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: rgba($color-black, .7);
+        width: 100%;
+        z-index: 9999;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s;
+        overflow-y: auto;
+
+        &--login:target{
+                opacity: 1;
+                visibility: visible;
+        }
+
+        &--signup:target{
+                opacity: 1;
+                visibility: visible;
+        }
+
+        &__content{
+                background-color: white;
+                box-shadow: 0 2rem 4rem rgba($color-black, .2);
+                border-radius: 5px;
+                transform: scale(.1);
+                transition: all .5s;
+                opacity: 0;
+        }
+
+
+        &:target &__content{
+                transform: scale(1);
+                opacity: 1;
+        }
+}
+

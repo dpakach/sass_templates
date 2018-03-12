@@ -7,13 +7,13 @@
 }
 
 html {
-        font-size: 62.5%;
-        @include respond(tab-land) {
-                font-size: 56.25%;
+        font-size: 55%;
+        @include respond(sixteen-h) {
+                font-size: 45%;
         }
-        
-        @include respond(tab-port) {
-                font-size: 50%;
+        @include respond(tab-port){
+                font-size: 40;
+
         }
 
         @include respond(phone){
@@ -32,6 +32,9 @@ body{
 		margin-top: 8.4rem;
         position: relative;
         min-height: 55vh;
+        max-width: 160rem;
+        margin-right: auto;
+        margin-left: auto;
         @include respond(tab-port){
                 margin-top: 20rem;
         }
@@ -43,6 +46,7 @@ body{
 a {
         color: $color-tertiary-light;
         text-decoration: none;
+        outline: none;
 }
 
 ::selection{

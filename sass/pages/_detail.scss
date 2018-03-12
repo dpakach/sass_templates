@@ -24,9 +24,11 @@
         justify-content: start;
         align-content: end;
         transition: all .2s;
-        background-image:linear-gradient(to right, rgba($color-white, .4), rgba($color-white, .4)), url(images/test.jpg);
+        background-image: url(images/test.jpg);
+        background-position: left top;
+        //background-image:linear-gradient(to right, rgba($color-white, .4), rgba($color-white, .4)), url(images/test.jpg);
         &:hover{
-                background-image:linear-gradient(to right, rgba($color-black, 0), rgba($color-black, 0)), url(images/test.jpg);
+                //background-image:linear-gradient(to right, rgba($color-black, 0), rgba($color-black, 0)), url(images/test.jpg);
                 .hero__text{
                 }
         }
@@ -67,8 +69,13 @@
                 margin: 1rem auto;
                 height: 4rem;
                 width: 4rem;
-                fill: $color-tertiary-lightest;
+                fill: $color-white;
+                transition: all .3s;
                 @include respond(phone) {
+                }
+
+                &--full{
+                        fill: $color-tertiary-light;
                 }
         }
         &__value{
@@ -102,6 +109,13 @@
         justify-content: space-around;
         margin-bottom: 5rem;
         box-shadow:0 0 1rem rgba($color-black, .2);
+
+        @include respond(tab-port){
+                grid-gap: 3rem;
+                padding: 1rem;
+
+        }
+
 }
 
 .tag{
@@ -117,6 +131,15 @@
                                 rgba($color-tertiary-light, 1));
         color: $color-tertiary-lightest;
         clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+        @include respond(tab-port){
+                font-size: 2rem;
+
+        }
+        @include respond(phone){
+                font-size: 1.8rem;
+                font-weight: 500;
+
+        }
 }
 
 .options{
@@ -132,6 +155,7 @@
         }
 
         &__map{
+                height: 400px;
 
                 background-color: $color-tertiary-lightest;
 
@@ -143,6 +167,8 @@
                 grid-gap: 2rem;
                 font-weight: 400;
                 grid-template-rows: auto 1fr;
+                justify-content: center;
+                align-items: center;
                 @include respond(tab-port){
                         grid-template-columns: 1fr 1fr;
                 }
@@ -162,10 +188,11 @@
         }
 
         &__user-info {
-                display: grid;
+                display: block;
                 grid-gap: 2rem;
                 justify-content: center;
                 border-radius: 5px;
+                margin: 0 auto;
         }
         &__username{
                 font-size: 1.5rem;
@@ -212,7 +239,7 @@
         background-color: $color-tertiary-lightest;
         font-size: 2rem;
         color: $color-tertiary-dark;
-        padding: 1rem 5rem;
+        padding: 5rem 5rem;
         box-shadow: 0 0 4rem rgba($color-black, .2);
         margin-bottom: 5rem;
 }
@@ -242,6 +269,10 @@
                         }
                 }
                 &__inputs{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        justify-content: center;
+                        align-items: center;
 
                 }
 
@@ -254,7 +285,14 @@
                         }
                 }
                 &__star{
-                        margin-top: 2rem;
+                        padding: 1rem;
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 8rem;
+                        display: block;
+                        margin: 0 auto;
                 }
         } 
 }

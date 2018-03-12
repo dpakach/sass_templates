@@ -55,14 +55,19 @@
                                 rgba($color-tertiary-dark, 1), 
                                 rgba($color-tertiary-light, 1));
                 box-shadow: 0rem 0rem 2rem rgba($color-black, .5);
+
                 &--form {
                         font-size: 3rem; 
                         padding: 1rem;
                         word-spacing: 2rem;
                 }
-                a{
-                        color: $color-grey-light-1;
-                }
+
+                a{color: $color-grey-light-1;}
+
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
 
         }
 
@@ -79,10 +84,14 @@
                                 grid-template-columns: auto 1fr;
                                 justify-content: center;
                                 align-items: center;
+                                padding: 1rem;
                                 &:not(:last-child) {
                                         border-bottom: 2px solid $color-grey-dark-2;
-                                        padding-bottom: 1rem;
                                 }
+                                -webkit-hyphens: auto;
+                                -moz-hyphens: auto;
+                                -ms-hyphens: auto;
+                                hyphens: auto;
                         }
                 }
         }

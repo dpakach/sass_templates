@@ -60,6 +60,20 @@
                         color: $color-white;
                 }
         }
+
+        &--secondary{
+                background-color: rgba($color-tertiary-light, .4);
+                color: $color-tertiary-dark;
+                border: 2px solid $color-tertiary-dark;
+                width: 30rem;
+
+                &:hover{
+                        background-color: rgba($color-tertiary-light, 1);
+                        border: 2px solid transparent;
+                        color: $color-white;
+                }
+
+        }
         &--header{
                 width: 25rem;
                 color: $color-white;

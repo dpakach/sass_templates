@@ -18,7 +18,7 @@
                 align-items: center;
                 grid-gap: 0;
                 grid-template-columns: auto 1fr;
-                padding-bottom: 2rem;
+                padding: 2rem;
 
                 border-bottom: 1px solid linear-gradient(to right, $color-tertiary-dark, $color-tertiary-light);
 
@@ -35,7 +35,7 @@
         &__photo{
                 overflow: hidden;
                 border-radius: 50%;
-                margin: 1rem;
+                margin: 1rem auto;
                 position: relative;
                 height: 15rem;
                 width: 15rem;
@@ -51,7 +51,7 @@
 
         &__about{
                 padding: 3rem;
-                font-size: 1.4rem;
+                font-size: 2rem;
         }
 
         &__info{
@@ -62,7 +62,7 @@
                         grid-template-columns: 1fr 2fr;
                         align-items: center;
                         grid-gap: 2rem;
-                        font-size: 1.5rem;
+                        font-size: 2rem;
 
                         
                         .name{

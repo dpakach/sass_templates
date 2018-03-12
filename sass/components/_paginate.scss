@@ -1,0 +1,68 @@
+.paginate{
+        display: grid;
+        font-size: 2rem;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(2rem, 4rem));
+        justify-content: center;
+        grid-gap: 2rem;
+        align-items: center;
+        margin-bottom: 3rem;
+        list-style: none;
+
+
+        &__item{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                line-height: 1;
+                background: rgba($color-tertiary-light, .8);
+                border-radius: 2px;
+                box-shadow: 0 0 2rem rgba($color-black, .2);
+                transition: all .2s;
+                font-weight: 700;
+                color: white;
+
+                a{
+                        color: white;
+                }
+
+                &--current{
+                        transform: scale(1.4);
+                        background: rgba($color-tertiary-light, 1);
+                        color: white;
+                        &:hover{
+                                background: $color-tertiary-dark !important;
+                                color: $color-white;
+                        }
+                }
+
+                &--side{
+                        transform: scale(1.2);
+                        background: rgba($color-tertiary-light, .7);
+                        color: white;
+                }
+
+                &--disabled{
+                        transform: scale(.6);
+                        background: rgba($color-tertiary-light, .4);
+
+                        &:hover{
+                                background: rgba($color-tertiary-light, .4) !important;
+                        }
+                }
+                &:hover{
+                        background: $color-tertiary-dark;
+                        color: $color-white !important;
+                        box-shadow: 0 0 2rem rgba($color-black, .5);
+                }
+
+        }
+
+        &__number{
+                display: inline-block;
+                margin: 0 auto;
+        }
+}
+

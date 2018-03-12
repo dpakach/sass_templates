@@ -43,9 +43,8 @@
                 margin-bottom: 0;
                 &--heading{
                         display: grid;
-                        grid-gap: 5rem;
-                        grid-template-columns: auto 1fr;
-                        justify-content: center;
+                        grid-template-columns: 1fr;
+                        justify-content: space-around;
                         align-items: center;
                         margin-bottom: 2rem;
                 }
@@ -68,13 +67,4 @@
                 backface-visibility: hidden;
         }
 
-        &:hover &__caption{
-                opacity: 1;
-                transform: translate(-50%, -50%);
-        }
-
-        &:hover &__img{
-                transform: scale(1);
-                filter: blur(3px) brightness(80%)
-        }
 }

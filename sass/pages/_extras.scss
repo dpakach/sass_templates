@@ -1,0 +1,47 @@
+.server-error{
+        display: block;
+        border: 2px solid orangered;
+        width: 60%;
+        margin: 5rem  auto ;
+        padding: 3rem;
+        border-radius: 5%;
+        box-shadow: 0 3rem 4rem rgba($color-black, .3);
+
+
+        &__code{
+                color: orangered;
+                font-size: 25rem;
+                font-weight: 100;
+                display: block;
+                text-align: center;
+                text-shadow: 0 0  4rem rgba($color-black, .3);
+
+                @include respond(tab-port){
+                        font-size: 15rem;
+                        font-weight: 200;
+                }
+
+        }
+
+        &__name{
+                font-size: 4rem; 
+                text-align: center;
+                color: orangered;
+                text-transform: uppercase;
+                display: block;
+        }
+
+        &__message{
+                font-size: 2rem; 
+                text-align: center;
+                color: orangered;
+
+                &--link{
+                        display: block;
+                        color: $color-tertiary-light;
+                        a{
+                            color: $color-tertiary-dark;
+                        }
+                }
+        }
+}
